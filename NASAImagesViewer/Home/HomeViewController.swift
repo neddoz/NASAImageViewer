@@ -54,5 +54,13 @@ class HomeViewController: UIViewController {
                     self.tableView.reloadData()
                 }
             }).disposed(by: disposeBag)
+        
+        viewModel
+            .error
+            .asObservable()
+            .subscribe { error in
+                guard let error = error.element else { return }
+        }.disposed(by: disposeBag)
+
     }
 }

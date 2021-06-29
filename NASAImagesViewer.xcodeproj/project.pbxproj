@@ -29,6 +29,7 @@
 		AD2538052688FF4A00128EFC /* DatumCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2538042688FF4A00128EFC /* DatumCellViewModel.swift */; };
 		AD2538072689D5D100128EFC /* URLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2538062689D5D100128EFC /* URLResponse.swift */; };
 		AD25380A268B124500128EFC /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD253809268B124500128EFC /* DateFormatter+Extension.swift */; };
+		AD25380C268B448B00128EFC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD25380B268B448B00128EFC /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		AD2538042688FF4A00128EFC /* DatumCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumCellViewModel.swift; sourceTree = "<group>"; };
 		AD2538062689D5D100128EFC /* URLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLResponse.swift; sourceTree = "<group>"; };
 		AD253809268B124500128EFC /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		AD25380B268B448B00128EFC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		C0D0EE935D9AE8A638EC46E1 /* Pods-NASAImagesViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASAImagesViewer.release.xcconfig"; path = "Target Support Files/Pods-NASAImagesViewer/Pods-NASAImagesViewer.release.xcconfig"; sourceTree = "<group>"; };
 		CC666E4C0A3E29C4E5FD9619 /* Pods_NASAImagesViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NASAImagesViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				AD253809268B124500128EFC /* DateFormatter+Extension.swift */,
+				AD25380B268B448B00128EFC /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				AD2537F32688F2FE00128EFC /* AppRouter.swift in Sources */,
 				AD2537EE2688F0A600128EFC /* SearchRequest.swift in Sources */,
 				AD2538072689D5D100128EFC /* URLResponse.swift in Sources */,
+				AD25380C268B448B00128EFC /* UIViewController.swift in Sources */,
 				AD2537EB2688EFA500128EFC /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
