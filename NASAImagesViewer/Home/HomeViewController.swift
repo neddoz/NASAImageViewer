@@ -59,7 +59,7 @@ class HomeViewController: UIViewController {
             .error
             .asObservable()
             .subscribe { error in
-                guard let error = error.element else { return }
+                guard let error = error.element, !(viewModel.isLoading.value) else { return }
                 if let error = error as? NetworkError {
                     self.showAlert("That didn't work!", body: error.errorMessage())
                 } else {
