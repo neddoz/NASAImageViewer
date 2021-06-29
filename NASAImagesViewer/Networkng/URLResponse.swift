@@ -86,7 +86,7 @@ public enum NetworkError: Error {
         case .Unauthorized:
             return "Unauthorized"
         default:
-            return "UnKnown"
+            return "Something Went Wrong!"
         }
     }
 }

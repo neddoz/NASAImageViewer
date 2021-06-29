@@ -60,6 +60,11 @@ class HomeViewController: UIViewController {
             .asObservable()
             .subscribe { error in
                 guard let error = error.element else { return }
+                if let error = error as? NetworkError {
+                    self.showAlert("That didn't work!", body: error.errorMessage())
+                } else {
+                    self.showAlert("That didn't work!", body: NetworkError.other.errorMessage())
+                }
         }.disposed(by: disposeBag)
 
     }
