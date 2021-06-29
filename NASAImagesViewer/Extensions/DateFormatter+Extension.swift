@@ -16,4 +16,10 @@ extension Formatter {
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssXXXXX"
         return formatter
     }()
+    
+    static func dateString(from date: Date)-> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YY, MMM d"
+        return dateFormatter.string(from: date)
+    }
 }
