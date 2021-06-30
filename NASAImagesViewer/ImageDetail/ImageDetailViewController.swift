@@ -84,9 +84,12 @@ class ImageDetailViewController: UIViewController {
         subTitleLabelLabel.attributedText = viewModel.subTitle()
         
         // content view
+        // Colors can be refactored to a centralized place
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 5
-        let attributes = [NSAttributedString.Key.paragraphStyle : style]
-        contentLabel.attributedText = NSAttributedString(string: viewModel.content(), attributes: attributes)
+        let attributes = [NSAttributedString.Key.paragraphStyle : style,
+                          .foregroundColor: UIColor(red: 21/255, green: 21/255, blue: 21/255, alpha: 1.0),
+                          .font: UIFont(name: "Helvetica Neue", size: 16)]
+        contentLabel.attributedText = NSAttributedString(string: viewModel.content(), attributes: attributes as [NSAttributedString.Key : Any])
     }
 }

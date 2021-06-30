@@ -15,7 +15,8 @@ extension NSMutableAttributedString {
     func bold(_ value:String) -> NSMutableAttributedString {
 
         let attributes:[NSAttributedString.Key : Any] = [
-            .font : boldFont
+            .font : UIFont(name: "Helvetica Neue", size: fontSize) ?? boldFont,
+            .foregroundColor: UIColor(red: 21/255, green: 21/255, blue: 21/255, alpha: 1.0)
         ]
 
         self.append(NSAttributedString(string: value, attributes:attributes))
@@ -25,8 +26,8 @@ extension NSMutableAttributedString {
     func normal(_ value:String) -> NSMutableAttributedString {
 
         let attributes:[NSAttributedString.Key : Any] = [
-            .font : normalFont,
-            .foregroundColor: UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1.0)
+            .font : UIFont(name: "Helvetica Neue", size: 14) ?? UIFont.labelFontSize,
+            .foregroundColor: UIColor(red: 98/255, green: 98/255, blue: 98/255, alpha: 1.0)
         ]
 
         self.append(NSAttributedString(string: value, attributes:attributes))
