@@ -36,6 +36,7 @@
 		AD253816268B667D00128EFC /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD253815268B667D00128EFC /* ImageView.swift */; };
 		AD253818268BA56300128EFC /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD253817268BA56300128EFC /* UIStackView.swift */; };
 		AD25381A268C769D00128EFC /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD253819268C769D00128EFC /* NSMutableAttributedString.swift */; };
+		AD25381C268C862400128EFC /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD25381B268C862400128EFC /* AppRouterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		AD253815268B667D00128EFC /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		AD253817268BA56300128EFC /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		AD253819268C769D00128EFC /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
+		AD25381B268C862400128EFC /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
 		C0D0EE935D9AE8A638EC46E1 /* Pods-NASAImagesViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASAImagesViewer.release.xcconfig"; path = "Target Support Files/Pods-NASAImagesViewer/Pods-NASAImagesViewer.release.xcconfig"; sourceTree = "<group>"; };
 		CC666E4C0A3E29C4E5FD9619 /* Pods_NASAImagesViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NASAImagesViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -186,6 +188,7 @@
 				AD2537CE2688EA0800128EFC /* NASAImagesViewerTests.swift */,
 				AD2537D02688EA0800128EFC /* Info.plist */,
 				AD2537FB2688F76B00128EFC /* ReuseIdentifyingTests.swift */,
+				AD25381B268C862400128EFC /* AppRouterTests.swift */,
 			);
 			path = NASAImagesViewerTests;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD25381C268C862400128EFC /* AppRouterTests.swift in Sources */,
 				AD2537CF2688EA0800128EFC /* NASAImagesViewerTests.swift in Sources */,
 				AD2537FC2688F76B00128EFC /* ReuseIdentifyingTests.swift in Sources */,
 			);
