@@ -40,7 +40,6 @@ extension HomeViewController: UITableViewDataSource {
         }
         let datumViewModel = DatumCellViewModel(datum: viewModel.item(for: indexPath.row), path: indexPath)
         cell.configure(with: datumViewModel)
-        cell.delegate = self
         return cell
     }
 }
@@ -54,20 +53,9 @@ extension HomeViewController: UITableViewDelegate {
         guard let viewModel = viewModel else {return}
         let item = viewModel.item(for: indexPath.row)
         if let datum = item.data.first,
-           let urString = item.links.first?.href,
+           let urString = item.links.first?.href.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
            let url = URL(string: urString) {
-            DispatchQueue.main.async {
-                AppRouter.shared.presentImageDetailViewController(for: datum, imageURL: url)
-            }
-        }
-    }
-}
-
-extension HomeViewController: DatumDelegateCell {
-    func reload(at path: IndexPath) {
-        if (self.tableView.window != nil)
-        {
-            tableView.reloadRows(at: [path], with: UITableView.RowAnimation.none)
+            AppRouter.shared.presentImageDetailViewController(for: datum, imageURL: url)
         }
     }
 }

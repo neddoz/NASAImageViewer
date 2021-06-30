@@ -11,7 +11,8 @@ extension ImageDetailViewController {
     
     func setUpUI() {
         view.backgroundColor = .white
-        
+        imageView.contentMode = .scaleAspectFill
+
         // Imageview
         view.addSubview(imageView)
         imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true

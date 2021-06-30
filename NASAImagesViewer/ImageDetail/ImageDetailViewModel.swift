@@ -26,8 +26,7 @@ class ImageDetailViewModel {
     
     func url()-> URL? {
         // imageView
-        let replaced = imageURL.absoluteString.replacingOccurrences(of: "~thumb", with: "~orig")
-        return URL(string: replaced)
+        return imageURL
     }
 
     func subTitle()-> String {

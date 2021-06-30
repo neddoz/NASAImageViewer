@@ -64,7 +64,6 @@ class HomeViewController: UIViewController {
             .error
             .asObservable()
             .subscribe { error in
-                print(error.element??.localizedDescription)
                 guard let error = error.element else { return }
                 if !(viewModel.isLoading.value) {
                     DispatchQueue.main.async {
