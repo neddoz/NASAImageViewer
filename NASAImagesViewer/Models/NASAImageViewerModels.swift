@@ -28,11 +28,12 @@ struct Item: Codable {
 }
 
 extension Datum {
-    func subtitle()-> String {
-        return (self.photographer ?? "") + " | " + Formatter.dateString(from: self.dateCreated )
+    func subtitle()-> NSAttributedString {
+        let string = (self.photographer ?? "") + " | " + Formatter.dateString(from: self.dateCreated )
+        return NSMutableAttributedString().normal(string)
     }
-    func mainTitle()-> String {
-        return self.title
+    func mainTitle()-> NSAttributedString {
+        return NSMutableAttributedString().bold(self.title)
     }
 }
 

@@ -42,8 +42,8 @@ class DatumTableViewCell: UITableViewCell {
                     }
                     if let image = UIImage(data: data) {
                         imageCache.setObject(image, forKey: url.absoluteString as NSString)
-                        self?.config.text = self?.viewModel.value?.text()
-                        self?.config.secondaryText = self?.viewModel.value?.secondaryText()
+                        self?.config.attributedText = self?.viewModel.value?.text()
+                        self?.config.secondaryAttributedText = self?.viewModel.value?.secondaryText()
                         self?.config.image = image
                         DispatchQueue.main.async {
                             self?.layoutSubviews()
@@ -53,8 +53,8 @@ class DatumTableViewCell: UITableViewCell {
                 task.resume()
             }
 
-            self?.config.text = viewModel.text()
-            self?.config.secondaryText = viewModel.secondaryText()
+            self?.config.attributedText = viewModel.text()
+            self?.config.secondaryAttributedText = viewModel.secondaryText()
 
             self?.contentConfiguration = self?.config
         }).disposed(by: disposeBag)

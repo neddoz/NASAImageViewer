@@ -80,8 +80,8 @@ class ImageDetailViewController: UIViewController {
             imageView.loadImage(from: url)
         }
 
-        titleLabel.text = viewModel.title()
-        subTitleLabelLabel.text = viewModel.subTitle()
+        titleLabel.attributedText = viewModel.title()
+        subTitleLabelLabel.attributedText = viewModel.subTitle()
         
         // content view
         let style = NSMutableParagraphStyle()

@@ -22,14 +22,14 @@ final class DatumCellViewModel {
         return URL(string: string)
     }
 
-    func text()-> String? {
+    func text()-> NSAttributedString? {
         return item.data.first?.mainTitle()
     }
 
-    func secondaryText()-> String? {
+    func secondaryText()-> NSAttributedString? {
         if let item = item.data.first {
             return item.subtitle()
         }
-        return ""
+        return nil
     }
 }

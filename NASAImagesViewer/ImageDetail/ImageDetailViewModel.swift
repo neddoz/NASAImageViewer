@@ -20,7 +20,7 @@ class ImageDetailViewModel {
         return datum.datumDescription
     }
 
-    func title()-> String {
+    func title()-> NSAttributedString {
         return datum.mainTitle()
     }
     
@@ -29,7 +29,7 @@ class ImageDetailViewModel {
         return imageURL
     }
 
-    func subTitle()-> String {
+    func subTitle()-> NSAttributedString {
         return datum.subtitle()
     }
 }
