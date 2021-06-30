@@ -27,6 +27,15 @@ struct Item: Codable {
     let data: [Datum]
 }
 
+extension Datum {
+    func subtitle()-> String {
+        return (self.photographer ?? "") + " | " + Formatter.dateString(from: self.dateCreated )
+    }
+    func mainTitle()-> String {
+        return self.title
+    }
+}
+
 // MARK: - Datum
 struct Datum: Codable {
     let keywords: [String]?

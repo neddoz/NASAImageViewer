@@ -17,11 +17,18 @@ final class AppRouter {
     
     fileprivate lazy var root = UINavigationController(rootViewController: homeViewController)
 
-    public func rootController() -> UIViewController {
+    func rootController() -> UIViewController {
         root.isNavigationBarHidden = false
         return root
     }
-    
+
+    func presentImageDetailViewController(for item: Datum, imageURL: URL) {
+        let viewModel = ImageDetailViewModel(datum: item, imageURL: imageURL)
+        let vc = ImageDetailViewController(viewModel: viewModel)
+        root.navigationBar.prefersLargeTitles = false
+        self.root.pushViewController(vc, animated: false)
+    }
+
     init() {
         root.navigationBar.prefersLargeTitles = true
     }

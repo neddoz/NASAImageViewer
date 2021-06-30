@@ -34,16 +34,24 @@ class DatumTableViewCell: UITableViewCell {
             if let url = viewModel.imageURl() {
                 if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
                     config?.image = cachedImage as? UIImage
-                }
-                DispatchQueue.global().async {
-                    guard let data = try? Data(contentsOf: url),
-                          let image = UIImage(data: data) else {return}
                     DispatchQueue.main.async {
-                        imageCache.setObject(image, forKey: url.absoluteString as NSString)
-                        // TODO refactor to get rid of this delegate and make it self reload
-                        self?.delegate?.reload(at: viewModel.indexPath)
+                        config?.image = cachedImage as? UIImage
+                        return
                     }
                 }
+                let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+                    guard let data = data else {
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        if let image = UIImage(data: data) {
+                            imageCache.setObject(image, forKey: url.absoluteString as NSString)
+                            // TODO refactor to get rid of this delegate and make it self reload
+                            self?.delegate?.reload(at: viewModel.indexPath)
+                        }
+                    }
+                }
+                task.resume()
             }
 
             config?.text = viewModel.text()

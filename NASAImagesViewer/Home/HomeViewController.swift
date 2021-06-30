@@ -36,6 +36,11 @@ class HomeViewController: UIViewController {
         viewModel = HomeViewModel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     fileprivate func bindViewModel() {
         guard isViewLoaded,
               let viewModel = viewModel else { return  }
@@ -59,13 +64,17 @@ class HomeViewController: UIViewController {
             .error
             .asObservable()
             .subscribe { error in
-                guard let error = error.element, !(viewModel.isLoading.value) else { return }
-                if let error = error as? NetworkError {
-                    self.showAlert("That didn't work!", body: error.errorMessage())
-                } else {
-                    self.showAlert("That didn't work!", body: NetworkError.other.errorMessage())
+                print(error.element??.localizedDescription)
+                guard let error = error.element else { return }
+                if !(viewModel.isLoading.value) {
+                    DispatchQueue.main.async {
+                        if let error = error as? NetworkError {
+                            self.showAlert("That didn't work!", body: error.errorMessage())
+                        } else {
+                            self.showAlert("That didn't work!", body: NetworkError.other.errorMessage())
+                        }
+                    }
                 }
         }.disposed(by: disposeBag)
-
     }
 }

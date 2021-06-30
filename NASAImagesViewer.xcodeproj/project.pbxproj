@@ -31,6 +31,10 @@
 		AD25380A268B124500128EFC /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD253809268B124500128EFC /* DateFormatter+Extension.swift */; };
 		AD25380C268B448B00128EFC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD25380B268B448B00128EFC /* UIViewController.swift */; };
 		AD25380F268B497E00128EFC /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD25380E268B497E00128EFC /* ImageDetailViewController.swift */; };
+		AD253811268B5DFB00128EFC /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD253810268B5DFB00128EFC /* ImageDetailViewModel.swift */; };
+		AD253814268B612900128EFC /* ImageDetailViewController+UI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD253813268B612900128EFC /* ImageDetailViewController+UI+Extension.swift */; };
+		AD253816268B667D00128EFC /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD253815268B667D00128EFC /* ImageView.swift */; };
+		AD253818268BA56300128EFC /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD253817268BA56300128EFC /* UIStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		AD253809268B124500128EFC /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		AD25380B268B448B00128EFC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		AD25380E268B497E00128EFC /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		AD253810268B5DFB00128EFC /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
+		AD253813268B612900128EFC /* ImageDetailViewController+UI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageDetailViewController+UI+Extension.swift"; sourceTree = "<group>"; };
+		AD253815268B667D00128EFC /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		AD253817268BA56300128EFC /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		C0D0EE935D9AE8A638EC46E1 /* Pods-NASAImagesViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASAImagesViewer.release.xcconfig"; path = "Target Support Files/Pods-NASAImagesViewer/Pods-NASAImagesViewer.release.xcconfig"; sourceTree = "<group>"; };
 		CC666E4C0A3E29C4E5FD9619 /* Pods_NASAImagesViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NASAImagesViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -257,6 +265,8 @@
 			children = (
 				AD253809268B124500128EFC /* DateFormatter+Extension.swift */,
 				AD25380B268B448B00128EFC /* UIViewController.swift */,
+				AD253815268B667D00128EFC /* ImageView.swift */,
+				AD253817268BA56300128EFC /* UIStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,9 +274,19 @@
 		AD25380D268B496500128EFC /* ImageDetail */ = {
 			isa = PBXGroup;
 			children = (
+				AD253812268B609400128EFC /* Extensions */,
 				AD25380E268B497E00128EFC /* ImageDetailViewController.swift */,
+				AD253810268B5DFB00128EFC /* ImageDetailViewModel.swift */,
 			);
 			path = ImageDetail;
+			sourceTree = "<group>";
+		};
+		AD253812268B609400128EFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD253813268B612900128EFC /* ImageDetailViewController+UI+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD253816268B667D00128EFC /* ImageView.swift in Sources */,
 				AD2537F12688F28400128EFC /* NASAImageViewerModels.swift in Sources */,
 				AD2537FA2688F6F500128EFC /* ReuseIdentifying.swift in Sources */,
 				AD2538012688F9E000128EFC /* HomeViewController+UISetUp.swift in Sources */,
@@ -452,14 +473,17 @@
 				AD2537E92688EB8F00128EFC /* APIRequest.swift in Sources */,
 				AD2537F62688F34100128EFC /* HomeViewController.swift in Sources */,
 				AD25380A268B124500128EFC /* DateFormatter+Extension.swift in Sources */,
+				AD253811268B5DFB00128EFC /* ImageDetailViewModel.swift in Sources */,
 				AD2537BA2688EA0400128EFC /* SceneDelegate.swift in Sources */,
 				AD2538052688FF4A00128EFC /* DatumCellViewModel.swift in Sources */,
 				AD2537F32688F2FE00128EFC /* AppRouter.swift in Sources */,
 				AD2537EE2688F0A600128EFC /* SearchRequest.swift in Sources */,
 				AD2538072689D5D100128EFC /* URLResponse.swift in Sources */,
+				AD253818268BA56300128EFC /* UIStackView.swift in Sources */,
 				AD25380F268B497E00128EFC /* ImageDetailViewController.swift in Sources */,
 				AD25380C268B448B00128EFC /* UIViewController.swift in Sources */,
 				AD2537EB2688EFA500128EFC /* APIClient.swift in Sources */,
+				AD253814268B612900128EFC /* ImageDetailViewController+UI+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

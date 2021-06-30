@@ -27,16 +27,16 @@ final class HomeViewModel {
         let observable: Observable<Result<SearchResult, Error>> = client.send(apiRequest: searchRequest)
         isLoading.accept(true)
         observable.subscribe { result in
+            self.isLoading.accept(false)
             switch result {
             case .success(let apiResult):
                 self.items.accept(apiResult.collection.items)
             case .failure(let error):
                 self.error.accept(error)
             }
-            self.isLoading.accept(false)
         } onError: { error in
-            self.error.accept(error)
             self.isLoading.accept(false)
+            self.error.accept(error)
         } .disposed(by: disposeBag)
     }
     

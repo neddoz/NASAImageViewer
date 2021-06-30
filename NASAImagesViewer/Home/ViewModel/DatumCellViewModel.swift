@@ -23,12 +23,12 @@ final class DatumCellViewModel {
     }
 
     func text()-> String? {
-        return item.data.first?.title
+        return item.data.first?.mainTitle()
     }
 
     func secondaryText()-> String? {
         if let item = item.data.first {
-            return (item.photographer ?? "") + " | " + Formatter.dateString(from: item.dateCreated )
+            return item.subtitle()
         }
         return ""
     }

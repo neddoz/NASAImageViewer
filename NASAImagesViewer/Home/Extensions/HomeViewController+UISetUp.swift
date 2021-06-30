@@ -49,10 +49,25 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel else {return}
+        let item = viewModel.item(for: indexPath.row)
+        if let datum = item.data.first,
+           let urString = item.links.first?.href,
+           let url = URL(string: urString) {
+            DispatchQueue.main.async {
+                AppRouter.shared.presentImageDetailViewController(for: datum, imageURL: url)
+            }
+        }
+    }
 }
 
 extension HomeViewController: DatumDelegateCell {
     func reload(at path: IndexPath) {
-        tableView.reloadRows(at: [path], with: UITableView.RowAnimation.none)
+        if (self.tableView.window != nil)
+        {
+            tableView.reloadRows(at: [path], with: UITableView.RowAnimation.none)
+        }
     }
 }
