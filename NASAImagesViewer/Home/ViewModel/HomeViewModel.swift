@@ -10,19 +10,20 @@ import RxSwift
 import RxCocoa
 
 final class HomeViewModel {
-    
+
     var isLoading = BehaviorRelay<Bool>(value: false)
     var items = BehaviorRelay<[Item]>(value: [])
     var error = BehaviorRelay<Error?>(value: nil)
     var nextItemsLink: String?
     private let disposeBag = DisposeBag()
 
-    init() {
-        fetchItems(with: "\"\"")
+    init(doIntialFetch: Bool = true) {
+        if doIntialFetch {
+            fetchItems(with: "\"\"")
+        }
     }
 
-    func fetchItems(with query: String) {
-        let client: APIClient = APIClient.shared
+    func fetchItems(with query: String, client: APIServiceProtocol = APIClient.shared ) {
         let searchRequest: APIRequest = SearchRequest(query: query)
         let observable: Observable<Result<SearchResult, Error>> = client.send(apiRequest: searchRequest)
         isLoading.accept(true)

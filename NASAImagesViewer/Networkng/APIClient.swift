@@ -9,8 +9,19 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class APIClient {
-    static let shared = APIClient()
+public protocol APIServiceProtocol {
+    static var shared: APIServiceProtocol {get}
+    func send<T: Codable>(apiRequest: APIRequest)-> Observable<Result<T, Error>>
+}
+
+
+final class APIClient: APIServiceProtocol {
+    
+    static let instance = APIClient()
+    
+    static var shared: APIServiceProtocol {
+        return APIClient.instance
+    }
 
     func send<T: Codable>(apiRequest: APIRequest) -> Observable<Result<T, Error>> {
         let request = apiRequest.request(with: baseURL)

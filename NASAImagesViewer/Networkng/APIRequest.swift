@@ -12,7 +12,7 @@ public enum RequestType: String {
     case GET
 }
 
-protocol APIRequest {
+public protocol APIRequest {
     var method: RequestType { get }
     var path: String { get }
     var parameters: [String : String] { get }
