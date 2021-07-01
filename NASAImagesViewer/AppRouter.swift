@@ -22,7 +22,7 @@ final class AppRouter {
         return root
     }
 
-    func presentImageDetailViewController(for item: Datum, imageURL: URL) {
+    func presentImageDetailViewController(for item: Datum, imageURL: URL?) {
         let viewModel = ImageDetailViewModel(datum: item, imageURL: imageURL)
         let vc = ImageDetailViewController(viewModel: viewModel)
         root.navigationBar.prefersLargeTitles = false

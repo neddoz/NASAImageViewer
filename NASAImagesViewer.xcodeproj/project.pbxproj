@@ -37,6 +37,8 @@
 		AD253818268BA56300128EFC /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD253817268BA56300128EFC /* UIStackView.swift */; };
 		AD25381A268C769D00128EFC /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD253819268C769D00128EFC /* NSMutableAttributedString.swift */; };
 		AD25381C268C862400128EFC /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD25381B268C862400128EFC /* AppRouterTests.swift */; };
+		AD25381F268CB8FA00128EFC /* ImageDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD25381E268CB8FA00128EFC /* ImageDetailViewModelTests.swift */; };
+		AD253821268CC2C200128EFC /* MockClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD253820268CC2C200128EFC /* MockClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		AD253817268BA56300128EFC /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		AD253819268C769D00128EFC /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		AD25381B268C862400128EFC /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
+		AD25381E268CB8FA00128EFC /* ImageDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModelTests.swift; sourceTree = "<group>"; };
+		AD253820268CC2C200128EFC /* MockClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClient.swift; sourceTree = "<group>"; };
 		C0D0EE935D9AE8A638EC46E1 /* Pods-NASAImagesViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASAImagesViewer.release.xcconfig"; path = "Target Support Files/Pods-NASAImagesViewer/Pods-NASAImagesViewer.release.xcconfig"; sourceTree = "<group>"; };
 		CC666E4C0A3E29C4E5FD9619 /* Pods_NASAImagesViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NASAImagesViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -185,10 +189,12 @@
 		AD2537CD2688EA0800128EFC /* NASAImagesViewerTests */ = {
 			isa = PBXGroup;
 			children = (
+				AD25381D268CB86900128EFC /* Mocks */,
 				AD2537CE2688EA0800128EFC /* NASAImagesViewerTests.swift */,
 				AD2537D02688EA0800128EFC /* Info.plist */,
 				AD2537FB2688F76B00128EFC /* ReuseIdentifyingTests.swift */,
 				AD25381B268C862400128EFC /* AppRouterTests.swift */,
+				AD25381E268CB8FA00128EFC /* ImageDetailViewModelTests.swift */,
 			);
 			path = NASAImagesViewerTests;
 			sourceTree = "<group>";
@@ -293,6 +299,14 @@
 				AD253813268B612900128EFC /* ImageDetailViewController+UI+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AD25381D268CB86900128EFC /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AD253820268CC2C200128EFC /* MockClient.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,9 +512,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD253821268CC2C200128EFC /* MockClient.swift in Sources */,
 				AD25381C268C862400128EFC /* AppRouterTests.swift in Sources */,
 				AD2537CF2688EA0800128EFC /* NASAImagesViewerTests.swift in Sources */,
 				AD2537FC2688F76B00128EFC /* ReuseIdentifyingTests.swift in Sources */,
+				AD25381F268CB8FA00128EFC /* ImageDetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

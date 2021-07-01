@@ -8,10 +8,10 @@
 import Foundation
 
 class ImageDetailViewModel {
-    var datum: Datum
-    var imageURL: URL
+    fileprivate var datum: Datum
+    fileprivate var imageURL: URL?
 
-    init(datum: Datum, imageURL: URL) {
+    init(datum: Datum, imageURL: URL?) {
         self.datum = datum
         self.imageURL = imageURL
     }

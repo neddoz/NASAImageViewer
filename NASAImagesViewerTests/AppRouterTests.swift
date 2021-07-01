@@ -15,18 +15,7 @@ class ApprouterTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        item = .init(keywords: nil,
-                     mediaType: .image,
-                     nasaID: "",
-                     dateCreated: Date(),
-                     datumDescription: "",
-                     center: Center.hq,
-                     title: "",
-                     photographer: nil,
-                     description508: "",
-                     secondaryCreator: "",
-                     location: "",
-                     album: nil)
+        item = MockClient().getsampleDatum()
     }
 
     override func tearDown() {
@@ -50,7 +39,7 @@ class ApprouterTests: XCTestCase {
             return XCTFail("Failed to grab the navigation controller on the routeer object")
         }
         
-        sut.presentImageDetailViewController(for: item, imageURL: URL(string: "test_url")!)
+        sut.presentImageDetailViewController(for: item, imageURL: nil)
         XCTAssert(nav.viewControllers.last is ImageDetailViewController)
     }
 }
