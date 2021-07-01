@@ -23,7 +23,7 @@ final class HomeViewModel {
         }
     }
 
-    func fetchItems(with query: String, client: APIClient = .shared ) {
+    func fetchItems(with query: String, client: APIServiceProtocol = APIClient.shared ) {
         let searchRequest: APIRequest = SearchRequest(query: query)
         let observable: Observable<Result<SearchResult, Error>> = client.send(apiRequest: searchRequest)
         isLoading.accept(true)
