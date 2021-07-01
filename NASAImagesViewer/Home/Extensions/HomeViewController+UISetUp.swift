@@ -38,7 +38,7 @@ extension HomeViewController: UITableViewDataSource {
                                      for: indexPath) as? DatumTableViewCell, let viewModel = viewModel else {
             return UITableViewCell()
         }
-        let datumViewModel = DatumCellViewModel(datum: viewModel.item(for: indexPath.row), path: indexPath)
+        let datumViewModel = DatumCellViewModel(datum: viewModel.item(for: indexPath.row))
         cell.configure(with: datumViewModel)
         return cell
     }

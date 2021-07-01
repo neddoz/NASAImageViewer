@@ -25,4 +25,8 @@ class MockClient {
                      location: "Cosmonaut Hotel",
                      album: ["SpaceX_CRS-22_Science"])
     }
+
+    func getSampleItem()-> Item {
+        return .init(href: "sample_url", links: [], data: [getsampleDatum()])
+    }
 }

@@ -13,7 +13,7 @@
 		AD2537BF2688EA0400128EFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2537BD2688EA0400128EFC /* Main.storyboard */; };
 		AD2537C12688EA0800128EFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD2537C02688EA0800128EFC /* Assets.xcassets */; };
 		AD2537C42688EA0800128EFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD2537C22688EA0800128EFC /* LaunchScreen.storyboard */; };
-		AD2537CF2688EA0800128EFC /* NASAImagesViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2537CE2688EA0800128EFC /* NASAImagesViewerTests.swift */; };
+		AD2537CF2688EA0800128EFC /* DatumCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2537CE2688EA0800128EFC /* DatumCellViewModelTests.swift */; };
 		AD2537DA2688EA0800128EFC /* NASAImagesViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2537D92688EA0800128EFC /* NASAImagesViewerUITests.swift */; };
 		AD2537E92688EB8F00128EFC /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2537E82688EB8F00128EFC /* APIRequest.swift */; };
 		AD2537EB2688EFA500128EFC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2537EA2688EFA500128EFC /* APIClient.swift */; };
@@ -68,7 +68,7 @@
 		AD2537C32688EA0800128EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD2537C52688EA0800128EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD2537CA2688EA0800128EFC /* NASAImagesViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASAImagesViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD2537CE2688EA0800128EFC /* NASAImagesViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAImagesViewerTests.swift; sourceTree = "<group>"; };
+		AD2537CE2688EA0800128EFC /* DatumCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatumCellViewModelTests.swift; sourceTree = "<group>"; };
 		AD2537D02688EA0800128EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD2537D52688EA0800128EFC /* NASAImagesViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASAImagesViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2537D92688EA0800128EFC /* NASAImagesViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAImagesViewerUITests.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				AD25381D268CB86900128EFC /* Mocks */,
-				AD2537CE2688EA0800128EFC /* NASAImagesViewerTests.swift */,
+				AD2537CE2688EA0800128EFC /* DatumCellViewModelTests.swift */,
 				AD2537D02688EA0800128EFC /* Info.plist */,
 				AD2537FB2688F76B00128EFC /* ReuseIdentifyingTests.swift */,
 				AD25381B268C862400128EFC /* AppRouterTests.swift */,
@@ -514,7 +514,7 @@
 			files = (
 				AD253821268CC2C200128EFC /* MockClient.swift in Sources */,
 				AD25381C268C862400128EFC /* AppRouterTests.swift in Sources */,
-				AD2537CF2688EA0800128EFC /* NASAImagesViewerTests.swift in Sources */,
+				AD2537CF2688EA0800128EFC /* DatumCellViewModelTests.swift in Sources */,
 				AD2537FC2688F76B00128EFC /* ReuseIdentifyingTests.swift in Sources */,
 				AD25381F268CB8FA00128EFC /* ImageDetailViewModelTests.swift in Sources */,
 			);

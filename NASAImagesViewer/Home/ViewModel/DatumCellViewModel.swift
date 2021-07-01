@@ -10,11 +10,9 @@ import Foundation
 final class DatumCellViewModel {
     
     private let item: Item
-    var indexPath: IndexPath
     
-    init(datum: Item, path: IndexPath) {
+    init(datum: Item) {
         self.item = datum
-        self.indexPath = path
     }
 
     func imageURl()-> URL? {
