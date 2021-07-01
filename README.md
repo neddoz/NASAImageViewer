@@ -5,3 +5,4 @@
      there is repeating code for cosmetics.
   3. Dependency injection to make testing easier. This can be done through refactoring some pieces of code.
   4. Refreshing the Table view cells faster when the thumbnails have been fetched.
+  5. Pagination to fetch more items.
